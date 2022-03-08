@@ -30,4 +30,9 @@ public class PersonDAO {
                 .filter(pers -> pers.getId() == id).findFirst().orElse(null);
         return person;
     }
+
+    public void save(Person person) {
+        person.setId(++PEOPLE_COUNT);
+        people.add(person);
+    }
 }
