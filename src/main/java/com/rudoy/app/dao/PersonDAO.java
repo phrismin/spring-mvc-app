@@ -1,14 +1,12 @@
 package com.rudoy.app.dao;
 
 import com.rudoy.app.model.Person;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-//@Component
 public class PersonDAO {
     private static int PEOPLE_COUNT;
     private final List<Person> people;
@@ -34,5 +32,10 @@ public class PersonDAO {
     public void save(Person person) {
         person.setId(++PEOPLE_COUNT);
         people.add(person);
+    }
+
+    public void update(int id, Person updatePerson) {
+        Person person = show(id);
+        person.setName(updatePerson.getName());
     }
 }
