@@ -30,10 +30,6 @@ public class Person {
     public Person() {
     }
 
-    public Person(int i, String tom) {
-
-    }
-
     public int getId() {
         return id;
     }
