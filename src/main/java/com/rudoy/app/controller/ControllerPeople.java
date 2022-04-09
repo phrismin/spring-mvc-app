@@ -36,12 +36,6 @@ public class ControllerPeople {
         return "people/show";
     }
 
-//    @GetMapping("/new")
-//    public String newPerson(Model model) {
-//        model.addAttribute("person", new Person());
-//        return "people/new";
-//    }
-
     @GetMapping("/new")
     public String newPerson(@ModelAttribute("person") Person person) {
         return "people/new";
